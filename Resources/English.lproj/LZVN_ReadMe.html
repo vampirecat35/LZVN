@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1343.14">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 23.0px Times; color: #444444; -webkit-text-stroke: #444444}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #444444; -webkit-text-stroke: #444444; min-height: 19.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 19.0px Times; color: #444444; -webkit-text-stroke: #444444}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #444444; -webkit-text-stroke: #444444}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #444444; -webkit-text-stroke: #444444}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Times; color: #444444; -webkit-text-stroke: #444444; min-height: 18.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; color: #afafaf; -webkit-text-stroke: #afafaf}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; color: #444444; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; color: #444444; -webkit-text-stroke: #444444}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; color: #444444; -webkit-text-stroke: #444444; min-height: 16.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s3 {font: 14.0px Times; font-kerning: none; color: #275e15; -webkit-text-stroke: 0px #275e15}
+    span.s4 {font-kerning: none; color: #006699; -webkit-text-stroke: 0px #006699}
+    span.s5 {font-kerning: none; -webkit-text-stroke: 0px #444444}
+    span.s6 {font-kerning: none; color: #808080; -webkit-text-stroke: 0px #808080}
+    span.s7 {font-kerning: none; color: #ff2f93; -webkit-text-stroke: 0px #ff2f93}
+    span.s8 {font-kerning: none; color: #0433ff; -webkit-text-stroke: 0px #0433ff}
+    td.td1 {width: 41.0px}
+    td.td2 {width: 1205.0px}
+    td.td3 {width: 33.0px}
+    td.td4 {width: 1003.0px}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">LZVN encode or decode</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">Extra info</span></p>
+<p class="p4"><span class="s1">Original author: Pike R Alpha</span></p>
+<p class="p4"><span class="s1">lzvn_decode function disassembly and integration in C: </span><span class="s2">Andy Vandijck</span></p>
+<p class="p4"><span class="s1">lzvn_decode function C conversion: Minuszwei</span></p>
+<p class="p4"><span class="s1">Improvements and extra work: Andy Vandijck</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s1">From Pike's blog:</span></p>
+<p class="p5"><span class="s1">Apple did not release the source code of the new LZVN functions, and you may not need it, because you can add the (private) PackageKit.framework to your development project. Here is an example taken from <a href="http://www.opensource.apple.com/source/kext_tools/kext_tools-384.1.4/kernelcache.c"><span class="s3">kernelcache.c</span></a> to show you how it works:</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="baseline" class="td1">
+        <p class="p7"><span class="s1">1</span></p>
+        <p class="p7"><span class="s1">2</span></p>
+        <p class="p7"><span class="s1">3</span></p>
+        <p class="p7"><span class="s1">4</span></p>
+        <p class="p7"><span class="s1">5</span></p>
+        <p class="p7"><span class="s1">6</span></p>
+        <p class="p7"><span class="s1">7</span></p>
+        <p class="p7"><span class="s1">8</span></p>
+        <p class="p7"><span class="s1">9</span></p>
+        <p class="p7"><span class="s1">10</span></p>
+        <p class="p7"><span class="s1">11</span></p>
+        <p class="p7"><span class="s1">12</span></p>
+        <p class="p7"><span class="s1">13</span></p>
+        <p class="p7"><span class="s1">14</span></p>
+        <p class="p7"><span class="s1">15</span></p>
+        <p class="p7"><span class="s1">16</span></p>
+        <p class="p7"><span class="s1">17</span></p>
+      </td>
+      <td valign="baseline" class="td2">
+        <p class="p8"><span class="s4"><b>if</b></span><span class="s5"> </span><span class="s1">(compressionType == COMP_TYPE_FASTLIB)</span></p>
+        <p class="p8"><span class="s1">{</span></p>
+        <p class="p8"><span class="s5">    </span><span class="s6"><b>size_t</b></span><span class="s5"> </span><span class="s1">outSize = 0;</span></p>
+        <p class="p8"><span class="s5">    </span><span class="s4"><b>void</b></span><span class="s5"> </span><span class="s1">* work_space = </span><span class="s7"><b>malloc</b></span><span class="s1">(lzvn_encode_work_size());</span></p>
+        <p class="p9"><span class="s1">     </span></p>
+        <p class="p8"><span class="s5">    </span><span class="s4"><b>if</b></span><span class="s5"> </span><span class="s1">(work_space != NULL)</span></p>
+        <p class="p9"><span class="s1">    </span><span class="s2">{</span></p>
+        <p class="p8"><span class="s5">        </span><span class="s1">kernelHeader-&gt;compressType = OSSwapHostToBigInt32(COMP_TYPE_FASTLIB);</span></p>
+        <p class="p8"><span class="s5">        </span><span class="s1">outSize = lzvn_encode(buf + offset, bufsize, (u_int8_t *)CFDataGetBytePtr(prelinkImage), CFDataGetLength(prelinkImage), work_space);</span></p>
+        <p class="p8"><span class="s5">        </span><span class="s7"><b>free</b></span><span class="s1">(work_space);</span></p>
+        <p class="p9"><span class="s1"> </span></p>
+        <p class="p8"><span class="s5">        </span><span class="s4"><b>if</b></span><span class="s5"> </span><span class="s1">(outSize != 0)</span></p>
+        <p class="p9"><span class="s1">        </span><span class="s2">{</span></p>
+        <p class="p8"><span class="s5">            </span><span class="s1">bufend = buf + offset + outSize;</span></p>
+        <p class="p9"><span class="s1">        </span><span class="s2">}</span></p>
+        <p class="p9"><span class="s1">    </span><span class="s2">}</span></p>
+        <p class="p8"><span class="s1">}</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1">The call to lzvn_encode_work_size() returns 0x80000 and thus malloc() will allocate a 512 KB buffer (work_space). And this call is used in <a href="http://www.opensource.apple.com/source/IOGraphics/IOGraphics-485/IOGraphicsFamily/IOFramebuffer.cpp"><span class="s3">IOGraphicsFamily.kext</span></a></span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td valign="baseline" class="td3">
+        <p class="p7"><span class="s1">1</span></p>
+      </td>
+      <td valign="baseline" class="td4">
+        <p class="p8"><span class="s4"><b>extern</b></span><span class="s5"> </span><span class="s8">"C"</span><span class="s5"> </span><span class="s6"><b>size_t</b></span><span class="s5"> </span><span class="s1">lzvn_decode(</span><span class="s4"><b>void</b></span><span class="s5"> </span><span class="s1">* __restrict dst, </span><span class="s6"><b>size_t</b></span><span class="s5"> </span><span class="s1">dst_size, </span><span class="s4"><b>const</b></span><span class="s5"> </span><span class="s4"><b>void</b></span><span class="s5"> </span><span class="s1">* __restrict src, </span><span class="s6"><b>size_t</b></span><span class="s5"> </span><span class="s1">src_size);</span></p>
+        <p class="p10"><span class="s1"></span><br></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p5"><span class="s1">In short. You can also use this for kexts that you (plan to) develop. However. It won’t work on Linux and Windows, of course, so you may want to look at my <a href="https://github.com/Piker-Alpha/LZVN"><span class="s3">LZVN Github repository</span></a> where you can find the source code of a command line tool that I wrote to encode (compress) a file.</span></p>
+<p class="p5"><span class="s1">Have fun!</span></p>
+</body>
+</html>
